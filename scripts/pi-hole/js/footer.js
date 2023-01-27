@@ -160,10 +160,6 @@ function initCheckboxRadioStyle() {
 
 function initCPUtemp() {
   function setCPUtemp(unit) {
-    if (localStorage) {
-      localStorage.setItem("tempunit", tempunit);
-    }
-
     var temperature = parseFloat($("#rawtemp").text());
     var displaytemp = $("#tempdisplay");
     if (!isNaN(temperature)) {
@@ -188,7 +184,8 @@ function initCPUtemp() {
   // Read from local storage, initialize if needed
   var tempunit = localStorage ? localStorage.getItem("tempunit") : null;
   if (tempunit === null) {
-    tempunit = "C";
+    // Use the value set on setupVars
+    tempunit = $("#setupvars_tempunit").text();
   }
 
   setCPUtemp(tempunit);
@@ -200,6 +197,10 @@ function initCPUtemp() {
     tempunitSelector.on("change", function () {
       tempunit = $(this).val();
       setCPUtemp(tempunit);
+      // set localstorage only after manual selection
+      if (localStorage) {
+        localStorage.setItem("tempunit", tempunit);
+      }
     });
   }
 }
