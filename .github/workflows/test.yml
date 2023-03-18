@@ -32,7 +32,7 @@ jobs:
           YAML_CONFIG_FILE: .yamllint.conf
           VALIDATE_HTML: true
           VALIDATE_JAVASCRIPT_STANDARD: true
-          # JAVASCRIPT_DEFAULT_STYLE: prettier
+          JAVASCRIPT_DEFAULT_STYLE: prettier
           DEFAULT_BRANCH: master
           # MULTI_STATUS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
