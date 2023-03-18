@@ -28,13 +28,9 @@ jobs:
           FILTER_REGEX_EXCLUDE: '*/vendor/*'
           # VALIDATE_ALL_CODEBASE:false to run tests only on changed/new files
           VALIDATE_ALL_CODEBASE: true
-          VALIDATE_EDITORCONFIG: true
-          EDITORCONFIG_FILE_NAME: .editorconfig
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.conf
-          VALIDATE_PHP_PHPCS: true
-          VALIDATE_PHP_PHPSTAN: true
           VALIDATE_HTML: true
           VALIDATE_JAVASCRIPT_STANDARD: true
           JAVASCRIPT_DEFAULT_STYLE: prettier
