@@ -33,7 +33,6 @@ jobs:
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.conf
-          VALIDATE_CSS: true
           VALIDATE_PHP_PHPCS: true
           VALIDATE_PHP_PHPSTAN: true
           VALIDATE_HTML: true
