@@ -33,6 +33,7 @@ jobs:
           VALIDATE_HTML: true
           VALIDATE_JAVASCRIPT_STANDARD: true
           JAVASCRIPT_DEFAULT_STYLE: prettier
+          VALIDATE_JAVASCRIPT_ES: true
           DEFAULT_BRANCH: master
           # MULTI_STATUS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
